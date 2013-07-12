@@ -9,7 +9,7 @@ my %module_build_args = (
   "alien_name" => "Leptonica",
   "alien_repository" => {
     "host" => "",
-    "location" => ".",
+    "location" => "inc",
     "pattern" => qr/(?^:^leptonica-([\d\.]+)-min\.tar\.gz$)/,
     "protocol" => "local"
   },
