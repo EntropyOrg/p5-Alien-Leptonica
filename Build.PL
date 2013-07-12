@@ -6,6 +6,10 @@ use Module::Build 0.3601;
 use lib qw{inc}; use Alien::Base::ModuleBuild;
 
 my %module_build_args = (
+  "alien_build_commands" => [
+    "%pconfigure --prefix=%s --disable-programs",
+    "make"
+  ],
   "alien_name" => "Leptonica",
   "alien_repository" => {
     "host" => "blah.org",
