@@ -8,7 +8,8 @@ use lib qw{inc}; use Alien::Base::ModuleBuild;
 my %module_build_args = (
   "alien_build_commands" => [
     "%pconfigure --prefix=%s --disable-programs",
-    "make"
+    "make",
+    "mooo"
   ],
   "alien_name" => "Leptonica",
   "alien_repository" => {
