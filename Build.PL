@@ -10,7 +10,7 @@ my %module_build_args = (
   "alien_repository" => {
     "host" => "",
     "location" => ".",
-    "pattern" => qr/(?^:^Leptonica-([\d\.]+)-min\.tar\.gz$)/,
+    "pattern" => qr/(?^:^leptonica-([\d\.]+)-min\.tar\.gz$)/,
     "protocol" => "local"
   },
   "build_requires" => {},
