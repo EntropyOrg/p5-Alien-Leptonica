@@ -21,4 +21,7 @@ requires:
   parent: 0
   strict: 0
   warnings: 0
+resources:
+  homepage: https://github.com/zmughal/p5-Alien-Leptonica
+  repository: https://github.com/zmughal/p5-Alien-Leptonica.git
 version: 0.001
