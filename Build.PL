@@ -8,15 +8,14 @@ use lib qw{inc}; use Alien::Base::ModuleBuild;
 my %module_build_args = (
   "alien_build_commands" => [
     "%pconfigure --prefix=%s --disable-programs",
-    "make",
-    "mooo"
+    "make"
   ],
   "alien_name" => "Leptonica",
   "alien_repository" => {
-    "host" => "blah.org",
-    "location" => "/j",
+    "host" => "",
+    "location" => "inc",
     "pattern" => qr/(?^:^leptonica-([\d\.]+)-min\.tar\.gz$)/,
-    "protocol" => "http"
+    "protocol" => "local"
   },
   "build_requires" => {},
   "configure_requires" => {
