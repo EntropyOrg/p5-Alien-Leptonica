@@ -1,7 +1,0 @@
-use strict;
-use warnings;
-
-use Alien::Base::ModuleBuild;
-
-my $builder = Module::Build->new(%module_build_args);
-$builder->create_build_script;
