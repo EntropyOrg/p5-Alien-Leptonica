@@ -1,6 +1,6 @@
 package Alien::Leptonica;
 {
-  $Alien::Leptonica::VERSION = '0.001';
+  $Alien::Leptonica::VERSION = '0.001_01';
 }
 
 use strict;
