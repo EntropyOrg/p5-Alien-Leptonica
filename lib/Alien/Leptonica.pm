@@ -1,6 +1,6 @@
 package Alien::Leptonica;
 {
-  $Alien::Leptonica::VERSION = '0.001_01';
+  $Alien::Leptonica::VERSION = '0.002';
 }
 
 use strict;
@@ -11,16 +11,10 @@ use parent 'Alien::Base';
 1;
 
 __END__
+# ABSTRACT: Alien package for the Leptonica image processing library
 
-=head1 NAME
+=pod
 
-Alien::Leptonica - Alien package for the Leptonica image processing library
+=head1 SEE ALSO
 
-=head1 COPYRIGHT
-
-Copyright 2013 Zakariyya Mughal.
-
-This program is free software; you can redistribute it and/or
-modify it under the terms of the Artistic License version 2.0.
-
-=end
+L<Leptonica|http://www.leptonica.com/>, L<Image::Leptonica>
