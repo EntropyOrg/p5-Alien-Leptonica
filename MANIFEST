@@ -5,7 +5,6 @@ MANIFEST
 META.yml
 README
 dist.ini
-dzil-temp-build.sh
 inc/leptonica-1.69-min.tar.gz
 lib/Alien/Leptonica.pm
 tool/create-source-package
