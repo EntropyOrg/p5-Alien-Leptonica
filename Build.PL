@@ -14,7 +14,7 @@ my %module_build_args = (
   "alien_repository" => {
     "host" => "",
     "location" => "inc",
-    "pattern" => qr/(?^u:^leptonica-([\d\.]+)-min\.tar\.gz$)/,
+    "pattern" => "^leptonica-([\\d\\.]+)-min\\.tar\\.gz\$",
     "protocol" => "local"
   },
   "build_requires" => {},
@@ -40,11 +40,15 @@ my %module_build_args = (
     "warnings" => 0
   },
   "script_files" => [],
-  "test_requires" => {}
+  "test_requires" => {
+    "Test::More" => 0
+  }
 );
 
 
-my %fallback_build_requires = ();
+my %fallback_build_requires = (
+  "Test::More" => 0
+);
 
 
 unless ( eval { Module::Build->VERSION(0.4004) } ) {

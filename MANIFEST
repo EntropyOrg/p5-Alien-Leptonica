@@ -1,10 +1,12 @@
 Build.PL
 Changes
 LICENSE
+LICENSE.leptonica
 MANIFEST
 META.yml
 README
 dist.ini
 inc/leptonica-1.69-min.tar.gz
 lib/Alien/Leptonica.pm
+t/use.t
 tool/create-source-package
