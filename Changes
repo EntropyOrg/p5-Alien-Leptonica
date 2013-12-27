@@ -1,3 +1,7 @@
+0.002_01 2013-12-27 12:21:28-0600
+  - no functional change
+  - fix test
+
 0.002 2013-12-24 14:21:33-0600 
   - add license for Leptonica
   - add tests
