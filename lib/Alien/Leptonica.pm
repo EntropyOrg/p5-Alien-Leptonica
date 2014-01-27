@@ -1,5 +1,5 @@
 package Alien::Leptonica;
-$Alien::Leptonica::VERSION = '0.002_01';
+$Alien::Leptonica::VERSION = '0.003';
 use strict;
 use warnings;
 
@@ -17,7 +17,7 @@ Alien::Leptonica - Alien package for the Leptonica image processing library
 
 =head1 VERSION
 
-version 0.002_01
+version 0.003
 
 =head1 SEE ALSO
 
