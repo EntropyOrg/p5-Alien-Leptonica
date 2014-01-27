@@ -8,7 +8,6 @@ MANIFEST.SKIP
 META.yml
 README
 dist.ini
-inc/leptonica-1.69-min.tar.gz
 inc/leptonica-1.70-min.tar.gz
 lib/Alien/Leptonica.pm
 t/use.t
