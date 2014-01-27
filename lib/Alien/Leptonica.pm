@@ -1,8 +1,5 @@
 package Alien::Leptonica;
-{
-  $Alien::Leptonica::VERSION = '0.002_01';
-}
-
+$Alien::Leptonica::VERSION = '0.002_01';
 use strict;
 use warnings;
 
