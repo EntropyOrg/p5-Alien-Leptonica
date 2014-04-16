@@ -3,7 +3,6 @@ abstract: 'Alien package for the Leptonica image processing library'
 author:
   - 'Zakariyya Mughal <zmughal@cpan.org>'
 build_requires:
-  DDP: 0
   Test::More: 0
 configure_requires:
   Alien::Base: 0.002

@@ -4,8 +4,7 @@ use_ok('Alien::Leptonica');
 
 my $u = Alien::Leptonica->new;
 
-use DDP; p $u->libs;
-use DDP; p $u->cflags;
+print "$u->libs\n$u->cflags\n";
 
 like( $u->libs, qr/lept/ );
 
