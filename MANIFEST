@@ -12,3 +12,4 @@ inc/leptonica-1.70-min.tar.gz
 lib/Alien/Leptonica.pm
 t/use.t
 tool/create-source-package
+tool/patch/leptonica-1.70
