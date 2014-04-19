@@ -1,5 +1,5 @@
 0.004 2014-04-15 19:39:14-0500
-  - no functional change
+  - patch Leptonica 1.70 build to fix pkg-config metadata
 
 0.003 2014-01-27 11:29:11-0600
   - update to Leptonica 1.70
