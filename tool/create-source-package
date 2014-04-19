@@ -12,5 +12,6 @@ tar -xzvf "$SOURCE_PACKAGE"
 find "$EXTRACTED/prog/" ! -iname 'makefile*' -type f -exec rm -f {} \;
 #rm "$SOURCE_PACKAGE"
 mkdir "$TARGET_DIR"
+patch -d "leptonica-$VERSION" -p1 < patch/leptonica-$VERSION
 tar -czvf "$TARGET_DIR/$TARGET_PACKAGE" "$EXTRACTED"
 rm -Rf "$EXTRACTED"
