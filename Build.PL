@@ -31,9 +31,7 @@ my %module_build_args = (
   "dist_version" => "0.005",
   "license" => "perl",
   "module_name" => "Alien::Leptonica",
-  "recommends" => {
-    "Inline" => 0
-  },
+  "recommends" => {},
   "recursive_test_files" => 1,
   "requires" => {
     "Alien::Base" => "0.002",
@@ -44,12 +42,16 @@ my %module_build_args = (
   },
   "script_files" => [],
   "test_requires" => {
+    "DDP" => 0,
+    "Inline" => 0,
     "Test::More" => 0
   }
 );
 
 
 my %fallback_build_requires = (
+  "DDP" => 0,
+  "Inline" => 0,
   "Test::More" => 0
 );
 

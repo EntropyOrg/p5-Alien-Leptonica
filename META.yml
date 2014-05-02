@@ -3,6 +3,8 @@ abstract: 'Alien package for the Leptonica image processing library'
 author:
   - 'Zakariyya Mughal <zmughal@cpan.org>'
 build_requires:
+  DDP: 0
+  Inline: 0
   Test::More: 0
 configure_requires:
   Alien::Base: 0.002
@@ -14,8 +16,6 @@ meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: Alien-Leptonica
-recommends:
-  Inline: 0
 requires:
   Alien::Base: 0.002
   File::ShareDir: 1.03
