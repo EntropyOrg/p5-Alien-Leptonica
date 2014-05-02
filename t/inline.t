@@ -3,7 +3,7 @@ use Test::More;
 use_ok('Alien::Leptonica');
 
 SKIP: {
-	eval { require Inline };
+	eval { require 'Inline' };
 
 	skip "Inline not installed" if $@;
 
