@@ -42,14 +42,12 @@ my %module_build_args = (
   },
   "script_files" => [],
   "test_requires" => {
-    "Inline" => 0,
     "Test::More" => 0
   }
 );
 
 
 my %fallback_build_requires = (
-  "Inline" => 0,
   "Test::More" => 0
 );
 
