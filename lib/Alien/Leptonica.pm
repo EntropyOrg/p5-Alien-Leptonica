@@ -1,9 +1,15 @@
 package Alien::Leptonica;
-$Alien::Leptonica::VERSION = '0.004';
+$Alien::Leptonica::VERSION = '0.005';
 use strict;
 use warnings;
 
 use parent 'Alien::Base';
+
+sub Inline {
+	return unless $_[0] eq 'C'; # Inline's error message is good
+	my $self = __PACKAGE__->new;
+	{ +{ LIBS => $self->libs, INC => $self->flags } };
+}
 
 1;
 
@@ -17,7 +23,11 @@ Alien::Leptonica - Alien package for the Leptonica image processing library
 
 =head1 VERSION
 
-version 0.004
+version 0.005
+
+=head1 Inline support
+
+This module supports L<Inline's with functionality|Inline/"Playing 'with' Others">.
 
 =head1 SEE ALSO
 
