@@ -42,7 +42,6 @@ my %module_build_args = (
   },
   "script_files" => [],
   "test_requires" => {
-    "DDP" => 0,
     "Inline" => 0,
     "Test::More" => 0
   }
@@ -50,7 +49,6 @@ my %module_build_args = (
 
 
 my %fallback_build_requires = (
-  "DDP" => 0,
   "Inline" => 0,
   "Test::More" => 0
 );

@@ -7,7 +7,6 @@ SKIP: {
 
 	skip "Inline not installed" if $@;
 
-	use DDP; p Alien::Leptonica::Inline('C');
 	Inline->import( with => qw(Alien::Leptonica) );
 	Inline->bind( C => q{ extern char * getLeptonicaVersion (  ); },
 		ENABLE => AUTOWRAP => );
