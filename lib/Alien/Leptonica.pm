@@ -6,7 +6,7 @@ use warnings;
 use parent 'Alien::Base';
 
 sub Inline {
-	return unless $_[0] eq 'C'; # Inline's error message is good
+	return unless $_[-1] eq 'C'; # Inline's error message is good
 	my $self = __PACKAGE__->new;
 	+{
 		LIBS => $self->libs,
