@@ -2,7 +2,7 @@
 
 CURDIR=`dirname "$0"`
 cd "$CURDIR"
-VERSION="1.70"
+VERSION="1.71"
 SOURCE_PACKAGE="leptonica-$VERSION.tar.gz"
 EXTRACTED="leptonica-$VERSION"
 TARGET_PACKAGE="leptonica-$VERSION-min.tar.gz"
@@ -12,6 +12,8 @@ tar -xzvf "$SOURCE_PACKAGE"
 find "$EXTRACTED/prog/" ! -iname 'makefile*' -type f -exec rm -f {} \;
 #rm "$SOURCE_PACKAGE"
 mkdir "$TARGET_DIR"
-patch -d "leptonica-$VERSION" -p1 < patch/leptonica-$VERSION
+if [ -f patch/leptonica-$VERSION ]; then
+	patch -d "leptonica-$VERSION" -p1 < patch/leptonica-$VERSION
+fi
 tar -czvf "$TARGET_DIR/$TARGET_PACKAGE" "$EXTRACTED"
 rm -Rf "$EXTRACTED"

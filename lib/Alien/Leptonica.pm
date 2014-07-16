@@ -1,12 +1,12 @@
 package Alien::Leptonica;
-$Alien::Leptonica::VERSION = '0.006';
+$Alien::Leptonica::VERSION = '0.005';
 use strict;
 use warnings;
 
 use parent 'Alien::Base';
 
 sub Inline {
-	return unless $_[0] eq 'C'; # Inline's error message is good
+	return unless $_[-1] eq 'C'; # Inline's error message is good
 	my $self = __PACKAGE__->new;
 	+{
 		LIBS => $self->libs,
@@ -27,7 +27,7 @@ Alien::Leptonica - Alien package for the Leptonica image processing library
 
 =head1 VERSION
 
-version 0.006
+version 0.005
 
 =head1 Inline support
 
