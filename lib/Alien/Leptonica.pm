@@ -1,9 +1,10 @@
 package Alien::Leptonica;
-$Alien::Leptonica::VERSION = '0.005';
+$Alien::Leptonica::VERSION = '0.006';
 use strict;
 use warnings;
 
-use parent 'Alien::Base';
+use parent qw(Alien::Base Exporter);
+our @EXPORT_OK = qw(Inline);
 
 sub Inline {
 	return unless $_[-1] eq 'C'; # Inline's error message is good
@@ -27,7 +28,7 @@ Alien::Leptonica - Alien package for the Leptonica image processing library
 
 =head1 VERSION
 
-version 0.005
+version 0.006
 
 =head1 Inline support
 

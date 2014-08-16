@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Module::Build 0.3601;
+use Module::Build 0.28;
 use lib qw{inc}; use Alien::Base::ModuleBuild;
 
 my %module_build_args = (
@@ -28,13 +28,14 @@ my %module_build_args = (
     "Zakariyya Mughal <zmughal\@cpan.org>"
   ],
   "dist_name" => "Alien-Leptonica",
-  "dist_version" => "0.005",
+  "dist_version" => "0.006",
   "license" => "perl",
   "module_name" => "Alien::Leptonica",
   "recommends" => {},
   "recursive_test_files" => 1,
   "requires" => {
     "Alien::Base" => "0.002",
+    "Exporter" => 0,
     "File::ShareDir" => "1.03",
     "parent" => 0,
     "strict" => 0,
@@ -42,6 +43,8 @@ my %module_build_args = (
   },
   "script_files" => [],
   "test_requires" => {
+    "File::Basename" => 0,
+    "File::Spec" => 0,
     "Module::Load" => 0,
     "Test::More" => 0
   }
@@ -49,6 +52,8 @@ my %module_build_args = (
 
 
 my %fallback_build_requires = (
+  "File::Basename" => 0,
+  "File::Spec" => 0,
   "Module::Load" => 0,
   "Test::More" => 0
 );
