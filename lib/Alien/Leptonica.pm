@@ -3,7 +3,8 @@ package Alien::Leptonica;
 use strict;
 use warnings;
 
-use parent 'Alien::Base';
+use parent qw(Alien::Base Exporter);
+our @EXPORT_OK = qw(Inline);
 
 sub Inline {
 	return unless $_[-1] eq 'C'; # Inline's error message is good
