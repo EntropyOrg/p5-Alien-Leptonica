@@ -5,9 +5,10 @@ use File::Spec;
 
 use_ok('Alien::Leptonica');
 
-my $built_allheaders = '_alien/leptonica-1.71/src/allheaders.h';
+# for dev testing, get the headers out of the build directory
+my ($built_allheaders) = glob '_alien/leptonica-*/src/allheaders.h';
 my $built_dir = File::Spec->rel2abs(dirname($built_allheaders));
-my @inc_built = -f $built_allheaders ? (INC => "-I$built_dir") : ();
+my @inc_built = defined $built_allheaders && -f $built_allheaders ? (INC => "-I$built_dir") : ();
 
 SKIP: {
 	eval { load 'Inline::C' } or do {
