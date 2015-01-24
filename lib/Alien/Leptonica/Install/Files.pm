@@ -9,4 +9,5 @@ use strict;
 use warnings;
 
 use Alien::Leptonica qw(Inline);
+BEGIN { *Inline = *Alien::Leptonica::Inline }
 sub deps { () }
