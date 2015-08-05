@@ -3,8 +3,7 @@ package Alien::Leptonica;
 use strict;
 use warnings;
 
-use parent qw(Alien::Base Exporter );
-our @EXPORT_OK = qw(Inline);
+use parent qw(Alien::Base);
 
 1;
 
