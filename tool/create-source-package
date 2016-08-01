@@ -2,7 +2,7 @@
 
 CURDIR=`dirname "$0"`
 cd "$CURDIR"
-VERSION="1.71"
+VERSION="1.73"
 SOURCE_PACKAGE="leptonica-$VERSION.tar.gz"
 EXTRACTED="leptonica-$VERSION"
 TARGET_PACKAGE="leptonica-$VERSION-min.tar.gz"
