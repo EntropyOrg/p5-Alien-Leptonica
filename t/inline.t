@@ -7,7 +7,7 @@ use_ok('Alien::Leptonica');
 
 # for dev testing, get the headers out of the build directory
 my ($built_allheaders) = glob '_alien/leptonica-*/src/allheaders.h';
-my $built_dir = File::Spec->rel2abs(dirname($built_allheaders));
+my $built_dir = defined $built_allheaders && File::Spec->rel2abs(dirname($built_allheaders));
 my @inc_built = defined $built_allheaders && -f $built_allheaders ? (INC => "-I$built_dir") : ();
 
 SKIP: {
