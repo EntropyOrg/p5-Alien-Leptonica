@@ -8,7 +8,7 @@ Alien::Leptonica - Alien package for the Leptonica image processing library
 
 =head1 VERSION
 
-version 0.006
+version 0.007
 
 =head1 Inline support
 

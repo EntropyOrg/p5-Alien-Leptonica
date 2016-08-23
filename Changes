@@ -1,3 +1,15 @@
+0.007 2016-08-22 19:53:53-0500
+ - Ensure AB::MB is the configure requires.
+   Thanks to Graham Ollis (plicease++)!
+   See <https://github.com/EntropyOrg/p5-Alien-Leptonica/pull/9>.
+ - Update to Leptonica v1.73 (released 2016-01-25).
+   Thanks to Joel Maslak (jmaslak++) and the CPAN PRC!
+   See <https://github.com/EntropyOrg/p5-Alien-Leptonica/pull/10>.
+ - Use modern Alien::Base configuration for build commands and
+   Inline::C support.
+   Thanks to Graham Ollis (plicease++)!
+   See <https://github.com/EntropyOrg/p5-Alien-Leptonica/pull/8>.
+
 0.006 2014-08-16 03:06:40-0500
   - Inline improvements (thanks to mohawk2 <https://github.com/mohawk2>)
 
@@ -16,7 +28,7 @@
   - no functional change
   - fix test
 
-0.002 2013-12-24 14:21:33-0600 
+0.002 2013-12-24 14:21:33-0600
   - add license for Leptonica
   - add tests
 
