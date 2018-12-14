@@ -5,8 +5,34 @@ use warnings;
 
 use parent qw(Alien::Base);
 
+use Path::Tiny;
+use ExtUtils::PkgConfig;
+
 sub inline_auto_include {
 	return  [ 'allheaders.h' ];
+}
+
+sub libs {
+	my ($class) = @_;
+
+	if( $^O eq 'darwin' ) {
+		my $pc_dir = $class->pkg_config_path;
+		my ($libs_private) = path($pc_dir)->child('lept.pc')->slurp_utf8
+			=~ /Libs.private: (.*)/;
+		return join " ", Alien::Base::libs(@_), $libs_private;
+	}
+
+	return Alien::Base::libs(@_);
+}
+
+
+sub pkg_config_path {
+	my ($class) = @_;
+	if( $class->install_type eq 'share' ) {
+		return File::Spec->catfile( File::Spec->rel2abs($class->dist_dir), qw(lib pkgconfig) );
+	} else {
+		return ExtUtils::PkgConfig->variable('lept', 'pcfiledir');
+	}
 }
 
 sub Inline {
