@@ -1,5 +1,7 @@
 use alienfile;
 
+use Config;
+
 plugin 'PkgConfig' => 'lept';
 
 share {
@@ -16,8 +18,12 @@ share {
 
 	plugin 'Build::Autoconf';
 
+	my $extra_configure = '';
+	if( $^O eq 'MSWin32' ) {
+		$extra_configure .= " LIBS='$Config{libs}'";
+	}
 	build [
-		"%{configure} --disable-programs",
+		"%{configure} --disable-programs $extra_configure",
 		'%{make}',
 		'%{make} install',
 	];
