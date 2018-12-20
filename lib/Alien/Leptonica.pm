@@ -38,7 +38,7 @@ sub pkg_config_path {
 sub Inline {
 	my ($self, $lang) = @_;
 
-	if( $lang eq 'C' ) {
+	if( $lang =~ /^C(PP)?$/ ) {
 		my $params = Alien::Base::Inline(@_);
 
 		# Use static linking instead of dynamic linking. This works
