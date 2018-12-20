@@ -46,7 +46,7 @@ sub Inline {
 		# the `install_name` of the library must be set, but since this
 		# is the final path by default, linking to the `.dylib` under
 		# `blib/` at test time does not work without using `@rpath`.
-		if( $^O eq 'darwin' ) {
+		if( $^O eq 'darwin' and $self->install_type eq 'share' ) {
 			$params->{MYEXTLIB} .= ' ' .
 				join( " ",
 					map { File::Spec->catfile(
