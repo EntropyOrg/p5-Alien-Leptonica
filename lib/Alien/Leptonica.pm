@@ -15,7 +15,7 @@ sub inline_auto_include {
 sub libs {
 	my ($class) = @_;
 
-	if( $^O eq 'darwin' ) {
+	if( $^O eq 'darwin' || $^O eq 'MSWin32' ) {
 		my $pc_dir = $class->pkg_config_path;
 		my ($libs_private) = path($pc_dir)->child('lept.pc')->slurp_utf8
 			=~ /Libs.private: (.*)/;
