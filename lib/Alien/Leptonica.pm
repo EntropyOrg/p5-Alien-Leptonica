@@ -56,6 +56,9 @@ sub Inline {
 				);
 			$params->{LIBS} =~ s/-llept//g;
 		}
+
+		$params->{LIBS} = join " ", qw(:nosearch), $params->{LIBS}, qw(:search);
+
 		return $params;
 	}
 }
