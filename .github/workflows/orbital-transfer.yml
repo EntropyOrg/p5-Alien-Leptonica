@@ -17,12 +17,8 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
+        os: [windows-latest]
         coverage: ['']
-        include:
-          - os: 'ubuntu-latest'
-            coverage: coveralls
-            joblabel: '(Coverage)'
     steps:
       - uses: actions/checkout@v2
 
@@ -43,6 +39,16 @@ jobs:
         shell: bash
         run: |
           eval "$(curl https://raw.githubusercontent.com/orbital-transfer/launch-site/master/script/ci/github-actions-orbital.sh)"
+      - name: Use Orbital Transfer
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          perl -S orbitalism bootstrap auto
+          perl -S orbitalism
+          perl -S orbitalism test
+          true
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
       - name: Use Orbital Transfer
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
